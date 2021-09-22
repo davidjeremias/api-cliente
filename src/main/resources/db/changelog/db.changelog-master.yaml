@@ -1,0 +1,7 @@
+databaseChangeLog:
+  - include:
+      file: db/changelog/changes/db.changelog-create-table-endereco.yaml
+  - include:
+      file: db/changelog/changes/db.changelog-create-table-contato.yaml
+  - include:
+      file: db/changelog/changes/db.changelog-create-table-cliente.yaml

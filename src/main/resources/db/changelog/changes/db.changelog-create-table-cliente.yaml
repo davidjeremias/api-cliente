@@ -1,0 +1,49 @@
+databaseChangeLog:
+  - changeSet:
+      id: 3
+      author: David Jeremias
+      changes:
+        - createTable:
+            columns:
+              - column:
+                  autoIncrement: true
+                  constraints:
+                    nullable: false
+                    primaryKey: true
+                  name: id
+                  type: BIGINT
+              - column:
+                  constraints:
+                    nullable: false
+                  name: nome
+                  type: varchar(100)
+              - column:
+                  constraints:
+                    nullable: false
+                  name: cpf_cnpj
+                  type: varchar(14)
+              - column:
+                  constraints:
+                    nullable: false
+                  name: data_nascimento
+                  type: date
+              - column:
+                  constraints:
+                    nullable: false
+                  name: ativo
+                  type: BOOLEAN
+              - column:
+                  constraints:
+                    nullable: false
+                    foreignKeyName: fk_endereco
+                    references: endereco(id)
+                  name: endereco_id
+                  type: BIGINT
+              - column:
+                  constraints:
+                    nullable: false
+                    foreignKeyName: fk_contato
+                    references: contato(id)
+                  name: contato_id
+                  type: BIGINT
+            tableName: cliente

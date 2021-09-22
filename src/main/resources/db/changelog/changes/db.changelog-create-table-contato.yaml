@@ -1,0 +1,30 @@
+databaseChangeLog:
+  - changeSet:
+      id: 2
+      author: David Jeremias
+      changes:
+        - createTable:
+            columns:
+              - column:
+                  autoIncrement: true
+                  constraints:
+                    nullable: false
+                    primaryKey: true
+                  name: id
+                  type: BIGINT
+              - column:
+                  constraints:
+                    nullable: true
+                  name: tel_movel
+                  type: varchar(11)
+              - column:
+                  constraints:
+                    nullable: true
+                  name: tel_fixo
+                  type: varchar(11)
+              - column:
+                  constraints:
+                    nullable: false
+                  name: email
+                  type: varchar(100)
+            tableName: contato

@@ -1,0 +1,50 @@
+databaseChangeLog:
+  - changeSet:
+      id: 1
+      author: David Jeremias
+      changes:
+        - createTable:
+            columns:
+              - column:
+                  autoIncrement: true
+                  constraints:
+                    nullable: false
+                    primaryKey: true
+                  name: id
+                  type: BIGINT
+              - column:
+                  constraints:
+                    nullable: false
+                  name: cep
+                  type: varchar(20)
+              - column:
+                  constraints:
+                    nullable: false
+                  name: logradouro
+                  type: varchar(200)
+              - column:
+                  constraints:
+                    nullable: false
+                  name: numero
+                  type: varchar(10)
+              - column:
+                  constraints:
+                    nullable: true
+                  name: complemento
+                  type: varchar(200)
+              - column:
+                  constraints:
+                    nullable: false
+                  name: bairro
+                  type: varchar(100)
+              - column:
+                  constraints:
+                    nullable: false
+                  name: cidade
+                  type: varchar(100)
+              - column:
+                  constraints:
+                    nullable: false
+                  name: uf
+                  type: varchar(2)
+            tableName: endereco
