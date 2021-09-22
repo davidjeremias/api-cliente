@@ -1,21 +1,21 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: cliente-deployment
+  name: api-cliente-deployment
   labels:
-    app: cliente
+    app: api-cliente
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: cliente
+      app: api-cliente
   template:
     metadata:
       labels:
-        app: cliente
+        app: api-cliente
     spec:
       containers:
-        - name: cliente-container
-          image: u2dtecnologia/cliente
+        - name: api-cliente-container
+          image: u2dtecnologia/api-cliente
           ports:
             - containerPort: 8080
