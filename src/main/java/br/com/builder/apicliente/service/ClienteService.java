@@ -33,9 +33,6 @@ public class ClienteService {
     private ClienteRepositoryCustom clienteCustomRepository;
 
     @Autowired
-    private EnderecoService enderecoService;
-
-    @Autowired
     ModelMapper modelMapper;
 
     public Optional<ClienteResponse> save(ClienteRequest clienteRequest) {

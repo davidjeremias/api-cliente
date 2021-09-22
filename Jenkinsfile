@@ -29,7 +29,7 @@ pipeline {
         }
         stage('Arquivar JAR') {
            steps {
-               archive 'target/cliente.jar'
+               archive 'target/api-cliente.jar'
            }
         }
         stage('Building image Docker') {
