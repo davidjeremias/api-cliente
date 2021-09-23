@@ -7,7 +7,7 @@ spring:
   application:
     name: api-cliente
   profiles:
-    active: tst
+    active: dev
   security:
     user:
       name: builder
