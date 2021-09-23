@@ -5,7 +5,7 @@ metadata:
   labels:
     app: api-cliente
 spec:
-  replicas: 1
+  replicas: 2
   selector:
     matchLabels:
       app: api-cliente
@@ -16,6 +16,6 @@ spec:
     spec:
       containers:
         - name: api-cliente-container
-          image: u2dtecnologia/api-cliente
+          image: u2dtecnologia/api-cliente:latest
           ports:
             - containerPort: 8080
